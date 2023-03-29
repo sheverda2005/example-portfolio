@@ -1,0 +1,83 @@
+.my-skill {
+    background-color: black;
+    padding: 100px 0px;
+}
+
+.row-my-skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-skill-span-white {
+    color: white;
+}
+
+.my-skill-span-green {
+    color: #42bc7f;
+}
+
+.row-my-skill-h2 {
+    justify-content: center;
+    align-items: center;
+}
+
+.need-to-know {
+    width: 40%;
+}
+
+.need-to-know-text p {
+    color: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.need-to-know-scale-items {
+    width: 40%;
+}
+
+.need-to-know-scale-information {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    transition: width 3s ease;
+}
+
+.need-to-know-scale-progress-bar {
+    height: 30px;
+    background: #eee;
+    transition: width 3s ease;
+}
+
+.need-to-know-scale-progress-bar-my-progress {
+    width: 0%;
+    height: 100%;
+    background: #42bc7f;
+    transition: all 5s;
+}
+
+.need-to-know-scale-item {
+    margin: 40px 0px;
+}
+
+@media (max-width: 1000px) {
+    .row-my-skill {
+        flex-direction: column;
+    }
+    .my-skill {
+        background-color: black;
+        padding: 60px 0px;
+    }
+    .my-skill h2 {
+        margin-bottom: 30px;
+    }
+    .need-to-know-text p {
+        margin: 20px 0px;
+    }
+    .need-to-know {
+        width: 90%;
+    }
+    .need-to-know-scale-items {
+        width: 90%;
+    }
+}

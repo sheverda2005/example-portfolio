@@ -1,0 +1,113 @@
+.sing-up {
+    background-color: white;
+    padding: 60px 0;
+}
+
+.row-sing-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sing-up h4 {
+    color: #42bc7f;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.sing-up h2 {
+    font-size: 45px;
+    color: #686868;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 24px;
+    margin-bottom: 7px;
+}
+
+.sing-up p {
+    color: #686868;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.sing-up-send-information {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sing-up input {
+    background: transparent;
+    border: 2px solid #a1a1a1;
+    height: 50px;
+    line-height: 50px;
+    width: 40%;
+    font-weight: 600;
+    color: #a1a1a1;
+    padding-left: 18px;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.sing-up button {
+    background: #42bc7f;
+    border: none;
+    box-shadow: none;
+    height: 50px;
+    width: 160px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin-left: -7px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.sing-up button:hover {
+    background: #686868;
+    transition: all 0.4s ease;
+}
+
+.sing-up input:focus {
+    border: 2px solid #000000;
+}
+
+@media (max-width: 900px) {
+    .sing-up input {
+        width: 70%;
+    }
+    
+}
+
+@media (max-width: 672px) {
+    .sing-up h2 {
+        font-size: 40px;
+    }
+    .sing-up p {
+        color: #686868;
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    
+}
+
+@media (max-width: 620px) {
+    .sing-up button {
+        width: 120px;
+    }
+    .sing-up h2 {
+        font-size: 30px;
+    }
+    .sing-up h4 {
+        font-size: 20px;
+    }
+}

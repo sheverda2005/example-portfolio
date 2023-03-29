@@ -1,0 +1,138 @@
+.latest-post {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.latest-post-h2-green {
+    color: #42bc7f;
+}
+
+.row-latest-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-posts-content {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(400px);
+    opacity: 0;
+    transition: all 0.6s ease;
+
+}
+
+.posts-content-item {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.posts-content-item-image {
+    overflow: hidden;
+}
+
+.posts-content-item h2{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 20px 15px;
+}
+
+.posts-content-item p{
+    color: #999;
+    margin: 20px 15px 20px 15px;
+}
+
+
+.posts-content-item-views {
+    background-color: #42bc7f;
+    padding: 10px;
+    border-radius: 10px 0 0 0%;
+    color: white;
+    font-size: 15px;
+}
+
+.posts-content-item-image-onepage {
+    background-image: url("/img/blog1.jpg");
+}
+
+.posts-content-item-image-responsive {
+    background-image: url("/img/blog2.jpg");
+}
+
+.posts-content-item-image-template {
+    background-image: url("/img/blog3.jpg");
+}
+
+.posts-content-item-image {
+    background-size: cover;
+    background-position: center;
+    height: 230px;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+
+.posts-content-item-views-comments {
+    margin: 0px 10px;
+}
+
+.posts-content-item-views{
+    transform: translate(200px);
+    transition: all 0.3s ease;
+}
+
+.posts-content-item:hover .posts-content-item-views{
+    transform: translate(0px);
+    transition: all 0.3s ease;
+}
+
+.latest-posts-content.scrolled {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0px);
+    opacity: 1;
+    transition: all 0.6s ease;
+
+}
+
+@media (max-width: 1520px) {
+    .latest-posts-content {
+        transform: translate(0px);
+    
+    }
+}
+
+@media (max-width: 750px) {
+    .posts-content-item {
+        width: 80%;
+    }
+    .latest-posts-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .posts-content-item {
+        margin: 20px 0px;
+    }
+    .latest-posts-content {
+        margin-top: 30px;
+
+    }
+    .latest-posts-content.scrolled  {
+        margin: 30px 0px;
+    }
+}
+
+@media (max-width: 750px) {
+    .posts-content-item {
+        width: 90%;
+    }
+}

@@ -1,0 +1,118 @@
+.my-service {
+    padding: 100px 0px;
+    background: linear-gradient(-154deg,#42bc7f,#305a45);
+}
+
+.row-my-service {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-service-span-white {
+    color: #ffffff;
+}
+
+.my-service-services-item-text p {
+    color: #fffc;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.my-service-services-item-logo-img {
+    margin-right: 15px;
+}
+
+.my-service-services-item-logo {
+    font-size: 30px;
+    color: #ffffffb3;
+    border-right: 2px solid #fff;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.my-service-services-image {
+    height: 60px;
+    padding: 7px;
+    user-select: none;
+}
+
+.my-service-services-item {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    margin: 20px 0px;
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.my-service-services-item.scrolled:nth-child(1) {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 2s ease 0s;
+}
+
+.my-service-services-item.scrolled:nth-child(2) {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 2s ease 0.1s;
+}
+
+.my-service-services-item.scrolled:nth-child(3) {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 2s ease 0.2s;
+}
+
+.my-service-services-item.scrolled:nth-child(4) {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 2s ease 0.3s;
+}
+
+.my-service-services-item.scrolled:nth-child(5) {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 2s ease 0.4s;
+}
+
+.my-service-services-item.scrolled:nth-child(6) {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 2s ease 0.5s;
+}
+
+.my-service-services-items {
+    width: 70%;
+}
+
+.row-my-service-services-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 850px) {
+    .row-my-service {
+        flex-direction: column;
+    }
+    .my-service h2 {
+        margin-bottom: 30px;
+    }
+    .my-service-services-items {
+        width: 90%;
+    }
+    .my-service {
+        padding: 60px 0px;
+    }
+}
+
+@media (max-width: 630px) {
+    .my-service-services-item {
+        width: 90%;
+    }
+}
