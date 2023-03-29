@@ -129,10 +129,13 @@
     .latest-posts-content.scrolled  {
         margin: 30px 0px;
     }
+    .latest-post {
+        padding: 60px 0;
+    }    
 }
 
 @media (max-width: 750px) {
     .posts-content-item {
-        width: 90%;
+        width: 95%;
     }
 }

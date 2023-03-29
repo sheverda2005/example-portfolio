@@ -96,10 +96,14 @@
         justify-content: center;
     }
     .contact-info-forms {
-        width: 90%;
+        width: 95%;
         margin-left: 0px;
     }
     .contact-info-text {
-        width: 90%;
+        width: 95%;
+    }
+    .contact-info {
+        padding: 60px 0;
+        background-color: #f5f5f5;
     }
 }
