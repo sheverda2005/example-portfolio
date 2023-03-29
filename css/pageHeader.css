@@ -152,3 +152,27 @@
     
 }
 
+@media (max-width: 500px) {
+    .page-header-img {
+        background-position: 80%;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-header-buttons-view-work {
+        padding: 0px 20px 0px 20px;
+    }
+    .page-header-buttons-contact-me {
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    .page-header-buttons-view-work {
+        padding: 0px 15px 0px 15px;
+    }
+    .page-header-buttons-contact-me {
+        padding: 0px 15px 0px 15px;
+    }
+}
+
