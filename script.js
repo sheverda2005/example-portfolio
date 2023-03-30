@@ -185,5 +185,10 @@ nav_bar_scroll_handler()
 menu_burger.addEventListener("click", ()=> {
     menu_burger.classList.toggle("active")
     menu_burger_items.classList.toggle("active")
+    menu_burger_nav_items.forEach(item => {
+        if (item.classList.contains("active")) {
+            item.classList.remove("active")
+        }
+    })
 })
 
