@@ -17,35 +17,20 @@ const my_story = document.querySelector(".my-story")
 const latest_post = document.querySelector(".latest-post")
 const contact_info = document.querySelector(".contact-info")
 
+const menu_burger = document.querySelector(".menu-burger")
+const menu_burger_items = document.querySelector(".menu-burger-items")
 
+let site_element_array = [portfolio, about_me, my_service, my_skill, my_story, latest_post, contact_info]
 
-nav_item_list_link[0].addEventListener("click", ()=> {
-    portfolio.scrollIntoView({behavior: "smooth"})
-})
+function nav_item_link_scrollIntoView() {
+    nav_item_list_link.forEach((item, index)=> {
+        item.addEventListener("click", ()=> {
+            site_element_array[index].scrollIntoView({behavior: "smooth"})
+        } )
+    } )
+}
 
-nav_item_list_link[1].addEventListener("click", ()=> {
-    about_me.scrollIntoView({behavior: "smooth"})
-})
-
-nav_item_list_link[2].addEventListener("click", ()=> {
-    my_service.scrollIntoView({behavior: "smooth"})
-})
-
-nav_item_list_link[3].addEventListener("click", ()=> {
-    my_skill.scrollIntoView({behavior: "smooth"})
-})
-
-nav_item_list_link[4].addEventListener("click", ()=> {
-    my_story.scrollIntoView({behavior: "smooth"})
-})
-
-nav_item_list_link[5].addEventListener("click", ()=> {
-    latest_post.scrollIntoView({behavior: "smooth"})
-})
-
-nav_item_list_link[6].addEventListener("click", ()=> {
-    contact_info.scrollIntoView({behavior: "smooth"})
-})
+nav_item_link_scrollIntoView()
 
 
 nav_item_list_link.forEach(nav_item_link => {
@@ -116,11 +101,6 @@ function my_story_content_animation_handler() {
 my_story_content_animation_handler()
 
 
-
-
-
-
-
 function latest_posts_content_animation_handler() {
     const latest_posts_content_position = latest_posts_content.offsetTop;
     window.addEventListener('scroll',   function() {
@@ -134,4 +114,76 @@ function latest_posts_content_animation_handler() {
 }
 
 latest_posts_content_animation_handler()
+
+
+
+
+function nav_bar_scroll_handler() {
+    const about_me_position = about_me.offsetTop;
+    const my_service_position = my_service.offsetTop;
+    const my_skill_posiiton = my_skill.offsetTop;
+    const my_story_position = my_story.offsetTop;
+    const latest_post_position = latest_post.offsetTop;
+    const contact_info_posiiton = contact_info.offsetTop;
+    window.addEventListener('scroll',   function() {
+        let scrollPosition = window.pageYOffset + window.innerHeight - 180;
+        if (scrollPosition >= about_me_position) {
+            nav_item_list_link[0].classList.remove("active")
+            nav_item_list_link[1].classList.add("active")
+        }
+        if (scrollPosition <= about_me_position) {
+            nav_item_list_link[0].classList.add("active")
+            nav_item_list_link[1].classList.remove("active")
+        }
+        if (scrollPosition >= my_service_position) {
+            nav_item_list_link[1].classList.remove("active")
+            nav_item_list_link[2].classList.add("active")            
+        }
+        if (scrollPosition <= my_service_position && !(scrollPosition <= about_me_position)) {
+            nav_item_list_link[1].classList.add("active")
+            nav_item_list_link[2].classList.remove("active")            
+        }
+        if (scrollPosition >= my_skill_posiiton) {
+            nav_item_list_link[2].classList.remove("active")
+            nav_item_list_link[3].classList.add("active")  
+        }
+        if (scrollPosition <= my_skill_posiiton && !(scrollPosition <= my_service_position) ) {
+            nav_item_list_link[2].classList.add("active")
+            nav_item_list_link[3].classList.remove("active")  
+        }
+        if (scrollPosition >= my_story_position) {
+            nav_item_list_link[3].classList.remove("active")
+            nav_item_list_link[4].classList.add("active")  
+        }
+        if (scrollPosition <= my_story_position && !(scrollPosition <= my_skill_posiiton)) {
+            nav_item_list_link[3].classList.add("active")
+            nav_item_list_link[4].classList.remove("active")  
+        }
+        if (scrollPosition >= latest_post_position) {
+            nav_item_list_link[4].classList.remove("active")
+            nav_item_list_link[5].classList.add("active")  
+        }
+        if (scrollPosition <= latest_post_position && !(scrollPosition <= my_story_position)) {
+            nav_item_list_link[4].classList.add("active")
+            nav_item_list_link[5].classList.remove("active")  
+        }
+        if (scrollPosition >= contact_info_posiiton) {
+            nav_item_list_link[5].classList.remove("active")
+            nav_item_list_link[6].classList.add("active")  
+        }
+        if (scrollPosition <= contact_info_posiiton && !(scrollPosition <= latest_post_position)) {
+            nav_item_list_link[5].classList.add("active")
+            nav_item_list_link[6].classList.remove("active")  
+        }
+    });
+}
+
+nav_bar_scroll_handler()
+
+
+
+menu_burger.addEventListener("click", ()=> {
+    menu_burger.classList.toggle("active")
+    menu_burger_items.classList.toggle("active")
+})
 
